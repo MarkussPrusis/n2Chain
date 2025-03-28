@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/logo.ico">
+    <title>$N2</title>
+</head>
+<body id="body">
+    <namebox id="nameboxCorner">
+        <a href=main><button id="goBack" onclick="document.getElementById('click').play();">Go Back</button></a>
+        <img id="speaker" src="../static/speaker.png" width="50" height="50" onclick="document.getElementById('nchaininfo').play();">
+    </namebox>
+    <div class="content">
+        <h1>$N2 Chain</h1>
+        <p>
+        Introducing $N2: The First Fully AI-Powered Layer 2 Solution
+        0 second block times. The only quantum-resistant Layer 2 solution on Solana.
+                
+            Advanced Technologies:
+                →
+                Patented LLM (Lotta Lil Moneys) Technology designed to ensure transaction efficiency for users operating under resource-constrained conditions.
+                →
+                Proof-of-Associate Entry Scan System bounces out outsiders with best-in-class efficiency, rectifying the only AI-powered Layer 2 that is truly by associates, for associates.
+                →
+                Broke Associate Detection Software with Liquidity Deficiency Associate Analysis Nodes™, the network's AI identifies and adapts to low-resource users,
+                employing Quantum Validation Protocols™ to maintain system balance.
+
+            Revolutionary Features:
+                →
+                Thermodynamic Bag Chaser Architecture allowing holders of $N2 to get significantly more money in less time than broke associates not holding $N2.
+                →
+                0-Second Block Time via patent-pending One Gorillion TPS Transaction Speed.
+                →
+                Quantum Disruption Hood Protection Mitigation Layers™, leveraging Schrodinger's Cryptographic Encapsulation™ to protect against quantum computing attacks.
+
+
+    This isn't your unc's AI Technology. Welcome to the future, associate.
+        </p>
+    </div>
+</body>
+<video autoplay muted loop id="bg">
+    <source src="../static/nchainbg.mp4" type="video/mp4">
+</video>
+<audio id="click" src="../static/button.wav" preload="auto"></audio>
+<audio id="nchaininfo" src="../static/nchaininfo.m4a" preload="auto"></audio>
+<audio src="../static/nChainInfo.mp3" autoplay loop id="nChainInfo"></audio>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/logo.ico">
+    <title>$N2</title>
+</head>
+<body id="body">
+    <nameboxSide id="nameboxSide">
+        <table> 
+            <tr>
+                {% for table in tables %}
+                {{ table|safe }}
+                {% endfor %}
+            </tr>
+        </table>
+    </nameboxSide>
+    <img src="graph.png">
+    <namebox id="namebox">
+        <form method="POST" action="/data" id="options">
+            <select name="grafiks" id="grafiks">
+                <option value="lin">līniju diagramma</option>
+                <option value="his">histogramma</option>
+            </select><br><br>
+            <input type="checkbox" value="1" name="check" checked>$N2 Vērtība<br>
+            <input type="checkbox" value="2" name="check" checked>Fisch spēlētāju skaits<br>
+            <select name="from" id="from">
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+                <option value="2036">2036</option>
+                <option value="2037">2037</option>
+                <option value="2038">2038</option>
+                <option value="2039">2039</option>
+                <option value="2040">2040</option>
+                <option value="2041">2041</option>
+                <option value="2042">2042</option>
+                <option value="2043">2043</option>
+                <option value="2044">2044</option>
+                <option value="2045">2045</option>
+                <option value="2046">2046</option>
+                <option value="2047">2047</option>
+                <option value="2048">2048</option>
+                <option value="2049">2049</option>
+                <option value="2050">2050</option>
+                <option value="2051">2051</option>
+                <option value="2052">2052</option>
+                <option value="2053">2053</option>
+                <option value="2054">2054</option>
+                <option value="2055">2055</option>
+                <option value="2056">2056</option>
+                <option value="2057">2057</option>
+                <option value="2058">2058</option>
+                <option value="2059">2059</option>
+                <option value="2060">2060</option>
+                <option value="2061">2061</option>
+                <option value="2062">2062</option>
+                <option value="2063">2063</option>
+                <option value="2064">2064</option>
+                <option value="2065">2065</option>
+                <option value="2066">2066</option>
+                <option value="2067">2067</option>
+                <option value="2068">2068</option>
+                <option value="2069">2069</option>
+                <option value="2070">2070</option>
+                <option value="2071">2071</option>
+                <option value="2072">2072</option>
+                <option value="2073">2073</option>
+                <option value="2074">2074</option>
+                <option value="2075">2075</option>
+            </select>
+            <select name="to" id="to">
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+                <option value="2036">2036</option>
+                <option value="2037">2037</option>
+                <option value="2038">2038</option>
+                <option value="2039">2039</option>
+                <option value="2040">2040</option>
+                <option value="2041">2041</option>
+                <option value="2042">2042</option>
+                <option value="2043">2043</option>
+                <option value="2044">2044</option>
+                <option value="2045">2045</option>
+                <option value="2046">2046</option>
+                <option value="2047">2047</option>
+                <option value="2048">2048</option>
+                <option value="2049">2049</option>
+                <option value="2050">2050</option>
+                <option value="2051">2051</option>
+                <option value="2052">2052</option>
+                <option value="2053">2053</option>
+                <option value="2054">2054</option>
+                <option value="2055">2055</option>
+                <option value="2056">2056</option>
+                <option value="2057">2057</option>
+                <option value="2058">2058</option>
+                <option value="2059">2059</option>
+                <option value="2060">2060</option>
+                <option value="2061">2061</option>
+                <option value="2062">2062</option>
+                <option value="2063">2063</option>
+                <option value="2064">2064</option>
+                <option value="2065">2065</option>
+                <option value="2066">2066</option>
+                <option value="2067">2067</option>
+                <option value="2068">2068</option>
+                <option value="2069">2069</option>
+                <option value="2070">2070</option>
+                <option value="2071">2071</option>
+                <option value="2072">2072</option>
+                <option value="2073">2073</option>
+                <option value="2074">2074</option>
+                <option value="2075" selected="selected">2075</option>
+            </select>
+            <br><input type="submit" id="submit">
+        </form><br>
+        <a href=download_csv><button id="downloadcsv">Download as CSV File</button></a><br>
+        <a href=main><br><button id="goBack" onclick="document.getElementById('click').play();">Go Back</button></a>
+    </namebox>
+    <nameboxRight id="nameboxRight">
+        <img src="data:image/png;base64,{{ plot_data }}" alt="Plot">
+    </nameboxRight>
+</body>
+<video autoplay muted loop id="bg">
+    <source src="../static/abstractBG.mp4" type="video/mp4">
+</video>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../static/homescript.js"></script>
+<audio src="../static/data.m4a" autoplay id="data"></audio>
+<audio id="click" src="../static/button.wav" preload="auto"></audio>
+</html>

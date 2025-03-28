@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/logo.ico">
+    <title>$N2</title>
+</head>
+<body id="body">
+    <namebox id="nameboxCorner">
+        <a href=main><button id="goBack" onclick="document.getElementById('click').play();">Go Back</button></a>
+        <img id="speaker" src="../static/speaker.png" width="50" height="50" onclick="document.getElementById('fischinfo').play();">
+    </namebox>
+    <div class="content2">
+        <h1>Fisch</h1>
+        <p>
+            Fisch is a fishing and exploration experience created by WoozyNate.
+            It was officially released on October 5, 2024 and quickly gained widespread popularity on Roblox.
+            Fisch was originally published by WoozyNate himself, but transferred to the Fisching
+            group on November 4, 2024 after its acquisition.
+
+            Players can begin fishing by equipping their fishing rod and standing near water.
+            The bobber can be cast by holding down left-click and then releasing.
+            'Shake' buttons will appear on the screen, which can be optionally clicked to speed up the catching process.
+            Once a fish bites, a minigame starts in which the player must hold or release
+            left-click to keep the bar inside the moving white rectangle.
+            As the bar stays inside, a progress bar fills up. Once the progress bar is full, the fish is successfully caught.
+            
+            Every caught fish is cataloged in the player's Bestiary.
+            Fish can otherwise be sold to merchants for C$ - the main currency,
+            which can be used to buy items such as fishing rods, bait, and boats.
+            Every fish has a range of possible weights and a small chance of having a mutation,
+            which increases their value and alters their appearance.
+            Players can use boats to explore other islands and discover new fish.
+        </p>
+    </div>
+</body>
+<video autoplay muted loop id="bg">
+    <source src="../static/fischTrailer.mp4" type="video/mp4">
+</video>
+<audio src="../static/wavesBg.mp3" autoplay loop ></audio>
+<audio src="../static/fischBg.mp3" autoplay loop></audio>
+<audio id="click" src="../static/button.wav" preload="auto"></audio>
+<audio id="fischinfo" src="../static/fischinfo.m4a" preload="auto"></audio>
+</html>

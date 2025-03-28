@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/logo.ico">
+    <title>$N2</title>
+</head>
+<body id="body", onload="loadhome()">
+    <namebox id="namebox">
+        <a href=login><button id="button" onclick="document.getElementById('click').play();">Open</button></a>
+    </namebox>
+</body>
+<video autoplay muted loop id="bg">
+    <source src="../static/abstractBG.mp4" type="video/mp4">
+</video>
+<audio id="click" src="../static/button.wav" preload="auto"></audio>
+</html>

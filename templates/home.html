@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/logo.ico">
+    <title>$N2</title>
+</head>
+<body id="body">
+    <namebox id="namebox">
+        <text id="text">
+            <h2>Proof-of-Associate verification is required to continue.</h2>
+            <h1>Enter your name</h1>
+        </text>
+        <input id="name"><br><br>
+        <button id="confirm" onclick="document.getElementById('click').play();">Confirm</button>
+        <img id="good" style="display: none;" src="../static/good.png" alt="chinese smiling emoji">
+        <img id="bad" style="display: none;" src="../static/bad.png" alt="scratching head emoji">
+        <a href=main><button id="continue" onclick="document.getElementById('click').play();" style="display: none;">Continue</button></a>
+        <a href=login><button id="tryAgain" onclick="document.getElementById('click').play();" style="display: none;">Try again</button></a>
+    </namebox>
+    <namebox id="nameboxBottom">
+        <a href=creatorsnologin><button id="button" onclick="document.getElementById('click').play();">Site Creators</button></a>
+    </namebox>
+</body>
+<video autoplay muted loop id="bg">
+    <source src="../static/abstractBG.mp4" type="video/mp4">
+</video>
+<audio src="../static/verification.m4a" autoplay id="verification"></audio>
+<audio src="../static/wentwell.m4a" id="wentwell"></audio>
+<audio src="../static/wentwrong.m4a" id="wentwrong"></audio>
+<audio src="../static/changename.m4a" id="changename"></audio>
+<audio id="scan" src="../static/scan.wav" preload="auto"></audio>
+<audio id="goodSound" src="../static/good.wav" preload="auto"></audio>
+<audio id="badSound" src="../static/bad.wav" preload="auto"></audio>
+<audio id="click" src="../static/button.wav" preload="auto"></audio>
+<video autoplay muted loop style="display: none;" id="bg2">
+    <source id="kneeScan" src="../static/kneeScan.mp4" type="video/mp4">
+</video>
+<script src="../static/homescript.js"></script>
+</html>

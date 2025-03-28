@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/logo.ico">
+    <title>$N2</title>
+</head>
+<body id="body", onload="loadmain()">
+    <namebox id="namebox">
+        <h1 id="welcome">Enter your name</h1>
+        <a href=nchain><button id="button" onclick="document.getElementById('click').play();">What is $N2 Chain</button></a>
+        <a href=fisch><button id="button" onclick="document.getElementById('click').play();">What is Fisch</button></a>
+        <br><br><a href=data><button id="button" onclick="document.getElementById('click').play();">Data</button></a>
+    </namebox>
+    <namebox id="nameboxBottom">
+        <a href=creators><button id="button" onclick="document.getElementById('click').play();">Site Creators</button></a>
+    </namebox>
+</body>
+<video autoplay muted loop id="bg">
+    <source src="../static/abstractBG.mp4" type="video/mp4">
+</video>
+<audio src="../static/hello.m4a" autoplay id="hello"></audio>
+<audio id="click" src="../static/button.wav" preload="auto"></audio>
+<script src="../static/homescript.js"></script>
+</html>

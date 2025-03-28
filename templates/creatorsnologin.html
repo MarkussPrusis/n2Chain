@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/logo.ico">
+    <title>$N2</title>
+</head>
+<body id="body", onload="loadcreators()">
+    <namebox id="nameboxCorner">
+        <a href=login><button id="goBack" onclick="document.getElementById('click').play();">Go Back</button></a>
+    </namebox>
+    <namebox class="nav" id="namebox1">
+        <h1 id="text">Nifty associates</h1>
+        <h4 id="text">
+            <br>
+            Ādamsons-Pedčenko Ādams<br>
+            Vičmane Loreta Kitija<br>
+            Prūsis Markuss
+        </h4>
+    </namebox>
+    <namebox class="nav" id="namebox2">
+        <h1 id="text">Gross associates</h1>
+        <h4 id="text">Tihanovs Tomass Kristiāns</h4>
+    </namebox>
+</body>
+<video autoplay muted loop id="bg">
+    <source src="../static/abstractBG.mp4" type="video/mp4">
+</video>
+<audio src="../static/creators.m4a" autoplay id="creators"></audio>
+<audio id="click" src="../static/button.wav" preload="auto"></audio>
+<audio id="nifty" src="../static/nifty.mp3" preload="auto"></audio>
+<audio id="gross" src="../static/gross.mp3" preload="auto"></audio>
+<script src="../static/homescript.js"></script>
+</html>
