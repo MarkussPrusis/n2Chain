@@ -22,8 +22,8 @@ def open():
     return flask.render_template("open.html")
 
 @app.route("/login")
-def home():
-    return flask.render_template("home.html")
+def login():
+    return flask.render_template("login.html")
 
 @app.route("/main")
 def main():
